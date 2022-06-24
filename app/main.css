@@ -1,6 +1,14 @@
+/* Universal Rules */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace; 
+}
+
 body {
-    margin: 0px;
-    padding: 0px;
+    background-color: #000000;
+    color: #FFFFFF;
 }
 
 div.parent {
@@ -12,61 +20,92 @@ ul {
     text-align: left;
 }
 
-/* CSS Grid */
+/* CSS Grid / Flex */
 
-.container {
+/* Window Container */
+.grid-container {
     display: grid;
-    border: solid 1px #FF0000;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1.8fr 0.2fr;
+    grid-template-rows: 0.1fr 1.7fr 0.2fr;
     gap: 0px 0px;
     grid-template-areas:
         "navbar"
         "content"
         "buttons";
+    width: 100vw;
+    height: 100vh;
 }
 
-.navbar {
+/* Navbar */
+.grid-navbar {
     grid-area: navbar;
-    border: solid 1px #0000FF;
+    background-color: #131313;
 }
 
-.content {
+.flex-navbar {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Content Container */
+.grid-content {
     display: grid;
-    border: solid 1px #0000FF;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-template-areas:
         "checklist script";
     grid-area: content;
+    background-color: #252525;
 }
 
-.checklist {
+/* Content Sub Containers */
+.grid-checklist {
     border: solid 1px #00FF00;
     grid-area: checklist;
 }
 
-.script {
+.grid-script {
     border: solid 1px #00FF00;
     grid-area: script;
 }
 
-.buttons {
+/* Button Container */
+.grid-buttons {
     display: grid;
-    border: solid 1px #0000FF;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-template-areas:
         "checkButton codeButton";
     grid-area: buttons;
+    background-color: #131313;
 }
 
-.checkButton {
+/* Config Buttons */
+.grid-config-buttons {
     grid-area: checkButton;
+    text-align: center;
 }
 
-.codeButton {
+.flex-config-buttons {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Script Buttons */
+.grid-script-buttons {
     grid-area: codeButton;
+    text-align: center;
+}
+
+.flex-script-buttons {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
