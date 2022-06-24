@@ -1,0 +1,72 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+div.parent {
+    text-align: center;
+}
+
+ul {
+    display: inline-block;
+    text-align: left;
+}
+
+/* CSS Grid */
+
+.container {
+    display: grid;
+    border: solid 1px #FF0000;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1.8fr 0.2fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "navbar"
+        "content"
+        "buttons";
+}
+
+.navbar {
+    grid-area: navbar;
+    border: solid 1px #0000FF;
+}
+
+.content {
+    display: grid;
+    border: solid 1px #0000FF;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "checklist script";
+    grid-area: content;
+}
+
+.checklist {
+    border: solid 1px #00FF00;
+    grid-area: checklist;
+}
+
+.script {
+    border: solid 1px #00FF00;
+    grid-area: script;
+}
+
+.buttons {
+    display: grid;
+    border: solid 1px #0000FF;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "checkButton codeButton";
+    grid-area: buttons;
+}
+
+.checkButton {
+    grid-area: checkButton;
+}
+
+.codeButton {
+    grid-area: codeButton;
+}

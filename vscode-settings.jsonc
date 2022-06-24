@@ -1,0 +1,176 @@
+{
+    // UI Overrides
+    "workbench.colorTheme": "Styrokai",
+    "window.titleBarStyle": "custom",
+    "workbench.colorCustomizations": {
+        // UI Colors
+        "editorLineNumber.foreground": "#77FF00",
+        // Selection
+        "editor.selectionBackground": "#353535",
+        "editor.selectionHighlightBackground": "#00000000",
+        // Movement
+        "editorCursor.foreground": "#ff0000",
+        "editor.lineHighlightBackground": "#202020",
+        "editorBracketMatch.border": "#00000000",
+        // Indents
+        "editorWhitespace.foreground": "#000",
+        "editorIndentGuide.activeBackground": "#181818",
+        "editorIndentGuide.background": "#181818"
+    },
+    // Syntax Color Overrides
+    "editor.tokenColorCustomizations": {
+        // See TextMate Documentation: https://macromates.com/manual/en/language_grammars
+        "[Styrokai]": {
+            "comments": "#777777",
+            "strings": "#FFAE00",
+            "variables": "#FFFFFF",
+            "types": "#33DAFF",
+            "keywords": "#33DAFF",
+            "textMateRules": [
+                // LANGUAGE: XML
+                {
+                    // Tags
+                    "scope": [
+                        "entity.name.tag.localname.xml",
+                        "entity.name.tag.namespace.xml",
+                        "entity.name.tag.xml",
+                        "meta.tag.preprocessor.xml",
+                        "variable.language.documentroot.xml"
+                    ],
+                    "settings": {
+                        "foreground": "#757575",
+                        "fontStyle": "italic"
+                    }
+                },
+                {
+                    // Punctuation
+                    "scope": [
+                        "meta.tag.xml",
+                        "punctuation.definition.tag.xml",
+                        "punctuation.separator.namespace.xml",
+                        "punctuation.definition.entity.xml"
+                    ],
+                    "settings": {
+                        "foreground": "#757575"
+                    }
+                },
+                {
+                    // Keywords
+                    "scope": [
+                        "keyword.other.entity.xml",
+                        "keyword.other.entitytype.xml",
+                        "keyword.other.doctype.xml"
+                    ],
+                    "settings": {
+                        "foreground": "#77FF00",
+                        "fontStyle": "italic bold"
+                    }
+                },
+                {
+                    // Entity Tags & Parameters
+                    "scope": [
+                        "constant.character.entity.xml",
+                        "variable.language.entity.xml",
+                        "constant.character.parameter-entity.xml",
+                        "punctuation.definition.constant.xml"
+                    ],
+                    "settings": {
+                        "foreground": "#9D4CFF"
+                    }
+                },
+                {
+                    // Comments
+                    "scope": [
+                        "comment.block.xml",
+                        "punctuation.definition.comment.xml"
+                    ],
+                    "settings": {
+                        "foreground": "#00CCFF"
+                    }
+                },
+                {
+                    // Qouted
+                    "scope": [
+                        "string.quoted.double.xml"
+                    ],
+                    "settings": {
+                        "foreground": "#ff00d4"
+                    }
+                },
+                {
+                    // Text
+                    "scope": [
+                        "text.xml"
+                    ],
+                    "settings": {
+                        "foreground": "#FFFFFF"
+                    }
+                }
+            ]
+        }
+    },
+    // Setting Overrides
+    "workbench.startupEditor": "newUntitledFile",
+    "window.restoreWindows": "none",
+    "workbench.editor.closeOnFileDelete": true,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "editor.overviewRulerBorder": false,
+    "extensions.ignoreRecommendations": true,
+    "git.ignoreMissingGitWarning": false,
+    "editor.tabCompletion": "on",
+    "emmet.triggerExpansionOnTab": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.smoothScrolling": false,
+    "explorer.confirmDragAndDrop": false,
+    "phpformatter.pharPath": "C:\\PHP7\\",
+    "workbench.editor.untitled.hint": "hidden",
+    "security.workspace.trust.untrustedFiles": "open",
+    "window.zoomLevel": 2,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    // Terminal
+    // "terminal.integrated.cursorStyle": "line",
+    //"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe",
+    // "terminal.integrated.cwd": "C:\\Users\\user\\Desktop",
+    // Extension Settings
+    "better-comments.highlightPlainText": true,
+    "better-comments.multilineComments": true,
+    "better-comments.tags": [
+        {
+            "tag": "!",
+            "color": "#FF0000",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "?",
+            "color": "#00CCFF",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "*",
+            "color": "#77FF00",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "~",
+            "color": "#FFAE00",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "&",
+            "color": "#9D4CFF",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "\\",
+            "color": "#575757",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        }
+    ]
+}

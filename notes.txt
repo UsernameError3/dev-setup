@@ -1,0 +1,35 @@
+
+Install Apple Dev Tools:
+"run git in CLI"
+
+Install Brew:
+https://brew.sh/
+
+Generate Github SSH Token:
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+Install Github CLI Addon
+brew install gh
+
+Dot File Manager:
+brew install chezmoi
+
+Install Window Management:
+https://rectangleapp.com/
+
+Install Database Viewer:
+Postico
+
+Install Postman:
+https://www.postman.com/downloads/
+
+
+Configure VS Code:
+~/Library/Application Support/Code/User/settings.json
+
+
+create html templates, look at:
+https://www.digitalocean.com/community/tutorials/html-preload-prefetch
+
+Grid Layout:
+https://grid.layoutit.com/
