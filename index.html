@@ -20,7 +20,7 @@
             <div class="grid-script">
                 <div class="flex-script">
                     <textarea class="script-text-area" id="scriptBox" name="script-box">
-                        Example Script Text.
+Example Script Text.
                     </textarea>
                 </div>
             </div>
@@ -28,12 +28,34 @@
         <div class="grid-buttons">
             <div class="grid-config-buttons">
                 <div class="flex-config-buttons">
-                    <p>Generate: </p>
+                    <!-- Radio Button 1 -->
+                    <label class="custom-radial">
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="custom-radial-checkmark"></span>
+                    </label>
+                    <p class="custom-checkbox-text">Mac OS</p>
+                    <!-- Radio Button 2 -->
+                    <label class="custom-radial">
+                        <input type="radio" name="radio">
+                        <span class="custom-radial-checkmark"></span>
+                    </label>
+                    <p class="custom-checkbox-text">Linux</p>
+                    <!-- Radio Button 3 -->
+                    <label class="custom-radial">
+                        <input type="radio" name="radio">
+                        <span class="custom-radial-checkmark"></span>
+                    </label>
+                    <p class="custom-checkbox-text">Windows</p>
+                    <!-- Buttons -->
+                    <input type="button" class="button" value="Select All">
+                    <input type="button" class="button" value="Generate">
+                    <!-- Help Popup -->
+                    <p class="help-button">?</p>
                 </div>
             </div>
             <div class="grid-script-buttons">
                 <div class="flex-script-buttons">
-                    <p>Copy: </p>
+                    <input type="button" class="button" value="Copy Script">
                 </div>
             </div>
           </div>
