@@ -3,21 +3,14 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Courier New', Courier, monospace; 
+    font-family: 'Courier New', Courier, monospace;
 }
 
 body {
     background-color: #000000;
     color: #FFFFFF;
-}
-
-div.parent {
-    text-align: center;
-}
-
-ul {
-    display: inline-block;
-    text-align: left;
+    height: 100%;
+    width: 100%;
 }
 
 /* CSS Grid / Flex */
@@ -34,6 +27,7 @@ ul {
         "buttons";
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 
 /* Navbar */
@@ -59,17 +53,83 @@ ul {
         "checklist script";
     grid-area: content;
     background-color: #252525;
+    overflow-y: auto;
 }
 
-/* Content Sub Containers */
+/* Checklist */
 .grid-checklist {
-    border: solid 1px #00FF00;
+    border-right: solid 2px #000000;
     grid-area: checklist;
+    overflow-y: scroll;
 }
 
+.flex-checklist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.grid-checklist-card {
+    display: grid;
+    width: 95%;
+    grid-template-columns: 0.3fr 1.7fr;
+    grid-template-rows: 0.2fr 1.8fr;
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "checkbox title"
+        "icon description";
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #00FF00;
+}
+
+.grid-checklist-card-checkbox {
+    grid-area: checkbox;
+}
+
+.grid-checklist-card-title {
+    grid-area: title;
+}
+
+.grid-checklist-card-icon {
+    grid-area: icon;
+}
+
+.checklist-card-icon-img {
+    width: 80px;
+    height: auto;
+}
+
+
+.grid-checklist-card-description {
+    grid-area: description;
+}
+
+
+/* Script */
 .grid-script {
-    border: solid 1px #00FF00;
     grid-area: script;
+}
+
+.flex-script {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.script-text-area {
+    display: flex;
+    border: 2px solid #000000;
+    background-color: #131313;
+    color: #FFFFFF;
+    resize: none;
+    width: 95%;
+    height: 95%;
 }
 
 /* Button Container */
