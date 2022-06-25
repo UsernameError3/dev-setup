@@ -1,8 +1,7 @@
-// Specify Card Data
+// Specify Card Data URL
 const url = "https://usernameerror3.github.io/dev-setup/data.json";
 
-const cardData = [];
-
+// Fetch Card Data
 async function getData(url) {
     try {
         const response = await fetch(url);
