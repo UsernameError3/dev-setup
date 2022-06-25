@@ -1,2 +1,4 @@
 # dev-setup
-Private Repo for setting up Dev Machines.
+Repo for setting up Dev Machines.
+
+https://usernameerror3.github.io/dev-setup
