@@ -77,30 +77,61 @@ body {
     width: 95%;
     grid-template-columns: 0.3fr 1.7fr;
     grid-template-rows: 0.2fr 1.8fr;
-    gap: 5px 5px;
+    gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
         "checkbox title"
         "icon description";
     margin-top: 10px;
     margin-bottom: 10px;
-    border: 1px solid #00FF00;
+    border: 1px solid #000000;
+    background-color: #181818;
 }
 
 .grid-checklist-card-checkbox {
     grid-area: checkbox;
+    width: 100%;
+    border-bottom: 1px solid #000000;
+}
+
+.flex-checklist-card-checkbox {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-checklist-card-title {
     grid-area: title;
+    width: 100%;
+    border-bottom: 1px solid #000000;
+}
+
+.flex-checklist-card-title {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.checklist-card-title {
+    padding: 10px;
 }
 
 .grid-checklist-card-icon {
     grid-area: icon;
 }
 
+.flex-checklist-card-icon {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
 .checklist-card-icon-img {
-    width: 80px;
+    width: 50px;
     height: auto;
 }
 
@@ -109,6 +140,12 @@ body {
     grid-area: description;
 }
 
+.flex-checklist-card-description {
+    display: flex;
+    height: 100%;
+    padding-left: 15px;
+    padding-top: 12px;
+}
 
 /* Script */
 .grid-script {
@@ -124,12 +161,12 @@ body {
 
 .script-text-area {
     display: flex;
-    border: 2px solid #000000;
+    border: 1px solid #000000;
     background-color: #131313;
     color: #FFFFFF;
     resize: none;
     width: 95%;
-    height: 95%;
+    height: 93%;
 }
 
 /* Button Container */
@@ -168,4 +205,71 @@ body {
     height: 100%;
     align-items: center;
     justify-content: center;
+}
+
+
+/* Custom Checkboxes: */
+
+/* Checkbox Container */
+.custom-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 23px;
+    margin-bottom: 27px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.custom-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #404040;
+    border: 1px solid #000000;
+}
+
+/* On mouse-over, add a grey background color */
+.custom-checkbox:hover input~.custom-checkmark {
+    background-color: #808080;
+}
+
+/* When the checkbox is checked, add a blue background */
+.custom-checkbox input:checked~.custom-checkmark {
+    background-color: #0c87ec;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.custom-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.custom-checkbox input:checked~.custom-checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.custom-checkbox .custom-checkmark:after {
+    left: 8px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid #FFFFFF;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
 }
