@@ -1,24 +1,19 @@
 // Specify Card Data
-const cardData = [
-    {    
-        "id": "cardAppVSCode",
-        "title": "Visual Studio Code",
-        "description": "Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications. Visual Studio Code is free and ...",
-        "icon": "https://code.visualstudio.com/assets/images/code-stable.png"
-    },
-    {
-        "id": "cardAppVSCodeInsiders",
-        "title": "Visual Studio Code (Insiders)",
-        "description": "For early adopters, you can get the latest release of VS Code each day with the Insiders Build. Available on Mac, Linux and Windows.",
-        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Visual_Studio_Code_Insiders_1.36_icon.svg/512px-Visual_Studio_Code_Insiders_1.36_icon.svg.png?20190606225929"
-    },
-    {
-        "id": "cardAppVSPostman",
-        "title": "Postman",
-        "description": "Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create ...",
-        "icon": "https://symbols.getvecta.com/stencil_92/21_postman-icon.c79f00c910.svg"
+const url = "https://usernameerror3.github.io/dev-setup/data.json";
+
+const cardData = [];
+
+async function getData(url) {
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data.cards;
+    } catch (error) {
+        // Error handling here
+        console.log(error);
+        return;
     }
-];
+}
 
 // Generate Cards
 function generateCards(data) {
@@ -67,6 +62,8 @@ function generateCards(data) {
 };
 
 // Generate Elements on Page Load
-window.onload = function() {
+window.onload = async () => {
+    let cardData = await getData(url);
     generateCards(cardData);
+    console.log("Loading Complete...");
 };
