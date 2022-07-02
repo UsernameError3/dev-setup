@@ -29,10 +29,10 @@ function generateCard(data, script) {
                 <div class="grid-checklist-card-checkbox">
                     <div class="flex-checklist-card-checkbox">
                         <label class="custom-checkbox">
-                            <input id="${checklistCardCheckboxId}" type="checkbox" checked="checked">
+                            <input id="${checklistCardCheckboxId}" name="checklistCheckbox" type="checkbox" checked="checked">
+                            <input type="hidden" value="${checklistCardHiddenScriptValue}">
                             <span class="custom-checkmark"></span>
                         </label>
-                        <input type="hidden" id="" name="" value="${checklistCardHiddenScriptValue}">
                     </div>
                 </div>
                 <div class="grid-checklist-card-title">
@@ -107,15 +107,72 @@ function assembleCards(data) {
     }
 };
 
+// Match Checkbox to Script Value
+async function matchCheckboxes(data, checklistId) {
+    for (let i = 0; i < data.length; i++) {
+        if (currentOS == 'mac') {
+            if (data[i].macEnabled == true) {
+                if (data[i].id == checklistId) {
+                    return data[i].macScript;
+                };
+            } else {
+                console.log('gen_script_1: Script Disabled For Mac OS...');
+                return;
+            };
+        } else if (currentOS == 'linux') {
+            if (data[i].linuxEnabled == true) {
+                if (data[i].id == checklistId) {
+                    return data[i].linuxScript;
+                };
+            } else {
+                console.log('gen_script_1: Script Disabled For Linux OS...');
+                return;
+            };
+        } else if (currentOS == 'windows') {
+            if (data[i].windowsEnabled == true) {
+                if (data[i].id == checklistId) {
+                    return data[i].windowsScript;
+                };
+            } else {
+                console.log('gen_script_1: Script Disabled For Windows OS...');
+                return;
+            };
+        } else {
+            console.log('gen_script_1: OS Selection Loop Iteration Failed...');
+            return;
+        };
+    };
+
+};
+
+// Assemble and Return Array of Script Values
+async function assembleScript (cardData) {
+    const checklist = document.getElementsByName('checklistCheckbox');
+    const checkboxes = [];
+
+    for (const checkboxId of checklist) {
+        if (checkboxId.type == 'checkbox' && checkboxId.checked == true) {
+            checkboxes.push(await matchCheckboxes(cardData, checkboxId.id));
+        }
+    }
+    return checkboxes;
+}
+
 // Generate Elements on Page Load
 window.onload = async () => {
     // Get Card Data
     let cardData = await getData(url);
 
-    // Define OS Selection Buttons
+    // Define App Control Buttons
     const selectMacOS = document.getElementById('radioMac');
     const selectLinuxOS = document.getElementById('radioLinux');
     const selectWindowsOS = document.getElementById('radioWindows');
+    const selectChecklistButton = document.getElementById('selectChecklistButton');
+    const generateScriptButton = document.getElementById('generateScriptButton');
+    const copyScriptBox = document.getElementById('scriptBox');
+
+    // Generate Initial Cards
+    assembleCards(cardData);
 
     // Listen for Mac OS Selection
     selectMacOS.addEventListener('change', (event) => {
@@ -165,8 +222,71 @@ window.onload = async () => {
         }
     });
 
-    // Generate Initial Cards
-    assembleCards(cardData);
+    // Enable Mass Selection / Deselection
+    selectChecklistButton.addEventListener('click', (event) => {
+        try {
+            const checklist = document.getElementsByName('checklistCheckbox');
+            if (checklist.length) {
+                if (selectChecklistButton.value == 'Select All') {
+                    for (var i = 0; i < checklist.length; i++) {
+                        if (checklist[i].type == 'checkbox') {
+                            checklist[i].checked = true;
+                        }
+                    }
+                    selectChecklistButton.setAttribute('value', 'Deselect All');
+                } else {
+                    for (var i = 0; i < checklist.length; i++) {
+                        if (checklist[i].type == 'checkbox') {
+                            checklist[i].checked = false;
+                        }
+                    }
+                    selectChecklistButton.setAttribute('value', 'Select All');
+                }
+            }
+        } catch (error) {
+            // Error handling here
+            console.log(error);
+        }
+    });
+
+    // Script Generation
+    generateScriptButton.addEventListener('click', async(event) => {
+        try {
+            // Start Script Generation
+            const scriptComponents = await assembleScript(cardData);
+            console.log('Script Components: ', scriptComponents);
+
+            // Export Script to Text Area
+            const scriptBox = document.getElementById('scriptBox');
+            console.log('Script Content: ', scriptBox);
+
+            if (scriptComponents.length) {
+                return scriptBox.value = scriptComponents.join('\n');
+            } else {
+                return scriptBox.value = 'No Script to Generate!';
+            }
+
+        } catch (error) {
+            // Error handling here
+            console.log(error);
+        }
+    });
+
+    // Copy Generated Script
+    copyScriptBox.addEventListener('click', async(event) => {
+        if (!navigator.clipboard) {
+            console.error("Clipboard API Not Available");
+            return
+        }
+        const data = event.target.innerText
+        try {
+            console.error("Copying Script to Clipboard...");
+            await navigator.clipboard.writeText(data)
+            event.target.textContent = 'Copied to clipboard'
+        } catch (err) {
+            console.error('Failed to copy!', err)
+        }
+    });
 
     console.log('Loading Complete...');
 };
