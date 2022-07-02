@@ -19,43 +19,49 @@
             </div>
             <div class="grid-script">
                 <div class="flex-script">
-                    <textarea class="script-text-area" id="scriptBox" name="script-box">
-Example Script Text.
-                    </textarea>
+                    <textarea class="script-text-area" id="scriptBox" name="script-box"></textarea>
                 </div>
             </div>
         </div>
         <div class="grid-buttons">
             <div class="grid-config-buttons">
-                <div class="flex-config-buttons">
+                <div id="appControls" class="flex-config-buttons">
                     <!-- Radio Button 1 -->
                     <label class="custom-radial">
-                        <input type="radio" checked="checked" name="radio">
+                        <input type="radio" id="radioMac" name="radioSelectOS" checked="checked">
                         <span class="custom-radial-checkmark"></span>
                     </label>
                     <p class="custom-checkbox-text">Mac OS</p>
                     <!-- Radio Button 2 -->
                     <label class="custom-radial">
-                        <input type="radio" name="radio">
+                        <input type="radio" id="radioLinux" name="radioSelectOS">
                         <span class="custom-radial-checkmark"></span>
                     </label>
                     <p class="custom-checkbox-text">Linux</p>
                     <!-- Radio Button 3 -->
                     <label class="custom-radial">
-                        <input type="radio" name="radio">
+                        <input type="radio" id="radioWindows" name="radioSelectOS">
                         <span class="custom-radial-checkmark"></span>
                     </label>
                     <p class="custom-checkbox-text">Windows</p>
+                    
                     <!-- Buttons -->
-                    <input type="button" class="button" value="Select All">
-                    <input type="button" class="button" value="Generate">
+                    <label>
+                        <input type="button" id="selectChecklistButton" class="button" value="Deselect All">
+                    </label>
+                    <label>
+                        <input type="button" id="generateScriptButton" class="button" value="Generate">
+                    </label>
+
                     <!-- Help Popup -->
-                    <p class="help-button">?</p>
+                    <label>
+                        <p class="help-button">?</p>
+                    </label>
                 </div>
             </div>
             <div class="grid-script-buttons">
                 <div class="flex-script-buttons">
-                    <input type="button" class="button" value="Copy Script">
+                    <input type="button" id="copyScriptButton" class="button" value="Copy Script">
                 </div>
             </div>
           </div>
