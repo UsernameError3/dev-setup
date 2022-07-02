@@ -3,20 +3,41 @@
         {    
             "id": "cardAppVSCode",
             "title": "Visual Studio Code",
+            "titleLink": "https://code.visualstudio.com/",
             "description": "Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications. Visual Studio Code is free and ...",
-            "icon": "https://code.visualstudio.com/assets/images/code-stable.png"
+            "icon": "https://code.visualstudio.com/assets/images/code-stable.png",
+            "macScript": "testing",
+            "macEnabled": true,
+            "linuxScript": "testing",
+            "linuxEnabled": false,
+            "windowsScript": "testing",
+            "windowsEnabled": false
         },
         {
             "id": "cardAppVSCodeInsiders",
             "title": "Visual Studio Code (Insiders)",
+            "titleLink": "https://code.visualstudio.com/insiders/",
             "description": "For early adopters, you can get the latest release of VS Code each day with the Insiders Build. Available on Mac, Linux and Windows.",
-            "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Visual_Studio_Code_Insiders_1.36_icon.svg/512px-Visual_Studio_Code_Insiders_1.36_icon.svg.png?20190606225929"
+            "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Visual_Studio_Code_Insiders_1.36_icon.svg/512px-Visual_Studio_Code_Insiders_1.36_icon.svg.png?20190606225929",
+            "macScript": "testing",
+            "macEnabled": true,
+            "linuxScript": "testing",
+            "linuxEnabled": false,
+            "windowsScript": "testing",
+            "windowsEnabled": false
         },
         {
             "id": "cardAppVSPostman",
             "title": "Postman",
+            "titleLink": "https://www.postman.com/",
             "description": "Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create ...",
-            "icon": "https://symbols.getvecta.com/stencil_92/21_postman-icon.c79f00c910.svg"
+            "icon": "https://symbols.getvecta.com/stencil_92/21_postman-icon.c79f00c910.svg",
+            "macScript": "testing",
+            "macEnabled": true,
+            "linuxScript": "testing",
+            "linuxEnabled": false,
+            "windowsScript": "testing",
+            "windowsEnabled": false
         }
     ]
 }
