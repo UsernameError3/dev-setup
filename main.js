@@ -7,7 +7,7 @@ async function getData(url) {
     try {
         const response = await fetch(url);
         const data = await response.json();
-        return data.cards;
+        return data;
     } catch (error) {
         // Error handling here
         console.log(error);
@@ -61,7 +61,7 @@ function generateCard(data, script) {
         console.log(error);
         return;
     }
-};
+}
 
 
 // Generate Cards
@@ -92,7 +92,7 @@ function assembleCards(data) {
         } else {
             continue;
         }
-    };
+    }
 
     // Set Checklist HTML
     if (checklistCards.length) {
@@ -100,7 +100,7 @@ function assembleCards(data) {
     } else {
         return checklistCardId.innerHTML = '';
     }
-};
+}
 
 // Match Checkbox to Script Value
 async function matchCheckboxes(data, checklistId) {
@@ -109,32 +109,32 @@ async function matchCheckboxes(data, checklistId) {
             if (data[i].macEnabled == true) {
                 if (data[i].id == checklistId) {
                     return data[i].macScript;
-                };
+                }
             } else {
                 return;
-            };
+            }
         } else if (currentOS == 'linux') {
             if (data[i].linuxEnabled == true) {
                 if (data[i].id == checklistId) {
                     return data[i].linuxScript;
-                };
+                }
             } else {
                 return;
-            };
+            }
         } else if (currentOS == 'windows') {
             if (data[i].windowsEnabled == true) {
                 if (data[i].id == checklistId) {
                     return data[i].windowsScript;
-                };
+                }
             } else {
                 return;
-            };
+            }
         } else {
             return;
-        };
-    };
+        }
+    }
 
-};
+}
 
 // Assemble and Return Array of Script Values
 async function assembleScript (cardData) {
@@ -173,7 +173,7 @@ window.onload = async () => {
                 assembleCards(cardData);
             } else {
                 console.log('OS Selection Failed')
-            };
+            }
         } catch (error) {
             // Error handling here
             console.log(error);
@@ -188,7 +188,7 @@ window.onload = async () => {
                 assembleCards(cardData);
             } else {
                 console.log('OS Selection Failed')
-            };
+            }
         } catch (error) {
             // Error handling here
             console.log(error);
@@ -203,7 +203,7 @@ window.onload = async () => {
                 assembleCards(cardData);
             } else {
                 console.log('OS Selection Failed')
-            };
+            }
         } catch (error) {
             // Error handling here
             console.log(error);
