@@ -6,7 +6,7 @@
             "titleLink": "https://code.visualstudio.com/",
             "description": "Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications. Visual Studio Code is free and ...",
             "icon": "https://code.visualstudio.com/assets/images/code-stable.png",
-            "macScript": "mac testing",
+            "macScript": "brew install --cask visual-studio-code",
             "macEnabled": true,
             "linuxScript": "linux testing",
             "linuxEnabled": false,
@@ -19,7 +19,7 @@
             "titleLink": "https://code.visualstudio.com/insiders/",
             "description": "For early adopters, you can get the latest release of VS Code each day with the Insiders Build. Available on Mac, Linux and Windows.",
             "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Visual_Studio_Code_Insiders_1.36_icon.svg/512px-Visual_Studio_Code_Insiders_1.36_icon.svg.png?20190606225929",
-            "macScript": "mac testing",
+            "macScript": "brew install --cask visual-studio-code-insiders",
             "macEnabled": true,
             "linuxScript": "linux testing",
             "linuxEnabled": false,
@@ -27,16 +27,42 @@
             "windowsEnabled": false
         },
         {
-            "id": "cardAppVSPostman",
+            "id": "cardAppPostman",
             "title": "Postman",
             "titleLink": "https://www.postman.com/",
             "description": "Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create ...",
             "icon": "https://symbols.getvecta.com/stencil_92/21_postman-icon.c79f00c910.svg",
-            "macScript": "mac testing",
+            "macScript": "brew install --cask postman",
             "macEnabled": true,
             "linuxScript": "linux testing",
             "linuxEnabled": false,
             "windowsScript": "windows testing",
+            "windowsEnabled": false
+        },
+        {
+            "id": "cardAppDocker",
+            "title": "Docker",
+            "titleLink": "https://docs.docker.com/get-docker/",
+            "description": "Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers...",
+            "icon": "https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png",
+            "macScript": "brew install docker docker-compose docker-machine",
+            "macEnabled": true,
+            "linuxScript": "linux testing",
+            "linuxEnabled": false,
+            "windowsScript": "windows testing",
+            "windowsEnabled": false
+        },
+        {
+            "id": "cardAppRectangle",
+            "title": "Rectangle",
+            "titleLink": "https://rectangleapp.com/",
+            "description": "Rectangle. Move and resize windows in macOS using keyboard shortcuts or snap areas...",
+            "icon": "https://repository-images.githubusercontent.com/193162629/0227dd00-2825-11eb-9ef2-6d36f9636d4e",
+            "macScript": "brew install --cask rectangle",
+            "macEnabled": true,
+            "linuxScript": null,
+            "linuxEnabled": false,
+            "windowsScript": null,
             "windowsEnabled": false
         }
     ]
