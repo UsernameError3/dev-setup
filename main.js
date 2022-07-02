@@ -58,7 +58,7 @@ function generateCard(data, script) {
         return checklistCardTemplate;
 
     } catch (error) {
-        console.log('gen_card_2: Card Was Not Generated...', error);
+        console.log(error);
         return;
     }
 };
@@ -73,27 +73,23 @@ function assembleCards(data) {
 
         if (currentOS == 'mac') {
             if (data[i].macEnabled == false) {
-                console.log('gen_card_1: Card Disabled For Mac OS...')
                 continue;
             } else {
                 checklistCards.push(generateCard(data[i], data[i].macScript));
             }
         } else if (currentOS == 'linux') {
             if (data[i].linuxEnabled == false) {
-                console.log('gen_card_1: Card Disabled For Linux OS...')
                 continue;
             } else {
                 checklistCards.push(generateCard(data[i], data[i].linuxScript));
             }
         } else if (currentOS == 'windows') {
             if (data[i].windowsEnabled == false) {
-                console.log('gen_card_1: Card Disabled For Windows OS...')
                 continue;
             } else {
                 checklistCards.push(generateCard(data[i], data[i].windowsScript));
             }
         } else {
-            console.log('gen_card_1: OS Selection Loop Iteration Failed...')
             continue;
         }
     };
@@ -102,7 +98,6 @@ function assembleCards(data) {
     if (checklistCards.length) {
         return checklistCardId.innerHTML = checklistCards.join('\n');
     } else {
-        console.log('gen_card_3: No Cards Enabled for this OS...')
         return checklistCardId.innerHTML = '';
     }
 };
@@ -116,7 +111,6 @@ async function matchCheckboxes(data, checklistId) {
                     return data[i].macScript;
                 };
             } else {
-                console.log('gen_script_1: Script Disabled For Mac OS...');
                 return;
             };
         } else if (currentOS == 'linux') {
@@ -125,7 +119,6 @@ async function matchCheckboxes(data, checklistId) {
                     return data[i].linuxScript;
                 };
             } else {
-                console.log('gen_script_1: Script Disabled For Linux OS...');
                 return;
             };
         } else if (currentOS == 'windows') {
@@ -134,11 +127,9 @@ async function matchCheckboxes(data, checklistId) {
                     return data[i].windowsScript;
                 };
             } else {
-                console.log('gen_script_1: Script Disabled For Windows OS...');
                 return;
             };
         } else {
-            console.log('gen_script_1: OS Selection Loop Iteration Failed...');
             return;
         };
     };
@@ -179,7 +170,6 @@ window.onload = async () => {
         try {
             if (selectMacOS.checked == true) {
                 currentOS = 'mac'
-                console.log('Setting OS to Mac...')
                 assembleCards(cardData);
             } else {
                 console.log('OS Selection Failed')
@@ -195,7 +185,6 @@ window.onload = async () => {
         try {
             if (selectLinuxOS.checked == true) {
                 currentOS = 'linux'
-                console.log('Setting OS to Linux...')
                 assembleCards(cardData);
             } else {
                 console.log('OS Selection Failed')
@@ -211,7 +200,6 @@ window.onload = async () => {
         try {
             if (selectWindowsOS.checked == true) {
                 currentOS = 'windows'
-                console.log('Setting OS to Windows...')
                 assembleCards(cardData);
             } else {
                 console.log('OS Selection Failed')
@@ -254,11 +242,9 @@ window.onload = async () => {
         try {
             // Start Script Generation
             const scriptComponents = await assembleScript(cardData);
-            console.log('Script Components: ', scriptComponents);
 
             // Export Script to Text Area
             const scriptBox = document.getElementById('scriptBox');
-            console.log('Script Content: ', scriptBox);
 
             if (scriptComponents.length) {
                 return scriptBox.value = scriptComponents.join('\n');
@@ -278,15 +264,14 @@ window.onload = async () => {
             console.error("Clipboard API Not Available");
             return
         }
-        const data = event.target.innerText
+        const data = event.target.value;
         try {
             console.error("Copying Script to Clipboard...");
             await navigator.clipboard.writeText(data)
-            event.target.textContent = 'Copied to clipboard'
+            // event.target.value = 'Copied to clipboard'
         } catch (err) {
             console.error('Failed to copy!', err)
         }
     });
 
-    console.log('Loading Complete...');
 };
