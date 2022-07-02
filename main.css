@@ -13,6 +13,27 @@ body {
     width: 100%;
 }
 
+a:link { 
+    color: #0c87ec;
+    text-decoration: none; 
+}
+
+a:visited { 
+    color: #0c87ec;
+    text-decoration: none; 
+}
+
+a:hover { 
+    color: #0c87ec;
+    text-decoration: none; 
+}
+
+a:active { 
+    color: #0c87ec;
+    text-decoration: none; 
+}
+
+
 /* CSS Grid / Flex */
 
 /* Window Container */
