@@ -1,17 +1,67 @@
 [
     {
-        "id,title,titleLink,description,icon,macScript,macEnabled,linuxScript,linuxEnabled,windowsScript,windowsEnabled": "cardAppVSCode,Visual Studio Code,https://code.visualstudio.com/,\"Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications. Visual Studio Code is free and ...\",https://code.visualstudio.com/assets/images/code-stable.png,brew install --cask visual-studio-code,true,linux testing,false,windows testing,false"
+        "id": "cardAppVSCode",
+        "title": "Visual Studio Code",
+        "titleLink": "https://code.visualstudio.com/",
+        "description": "\"Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications. Visual Studio Code is free and ...\"",
+        "icon": "https://code.visualstudio.com/assets/images/code-stable.png",
+        "macScript": "brew install --cask visual-studio-code",
+        "macEnabled": true,
+        "linuxScript": "linux testing",
+        "linuxEnabled": false,
+        "windowsScript": "windows testing",
+        "windowsEnabled": false
     },
     {
-        "id,title,titleLink,description,icon,macScript,macEnabled,linuxScript,linuxEnabled,windowsScript,windowsEnabled": "cardAppVSCodeInsiders,Visual Studio Code (Insiders),https://code.visualstudio.com/insiders/,\"For early adopters, you can get the latest release of VS Code each day with the Insiders Build. Available on Mac, Linux and Windows.\",https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Visual_Studio_Code_Insiders_1.36_icon.svg/512px-Visual_Studio_Code_Insiders_1.36_icon.svg.png?20190606225929,brew install --cask visual-studio-code-insiders,true,linux testing,false,windows testing,false"
+        "id": "cardAppVSCodeInsiders",
+        "title": "Visual Studio Code (Insiders)",
+        "titleLink": "https://code.visualstudio.com/insiders/",
+        "description": "\"For early adopters",
+        "icon": " you can get the latest release of VS Code each day with the Insiders Build. Available on Mac",
+        "macScript": " Linux and Windows.\"",
+        "macEnabled": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Visual_Studio_Code_Insiders_1.36_icon.svg/512px-Visual_Studio_Code_Insiders_1.36_icon.svg.png?20190606225929",
+        "linuxScript": "brew install --cask visual-studio-code-insiders",
+        "linuxEnabled": true,
+        "windowsScript": "linux testing",
+        "windowsEnabled": false
     },
     {
-        "id,title,titleLink,description,icon,macScript,macEnabled,linuxScript,linuxEnabled,windowsScript,windowsEnabled": "cardAppPostman,Postman,https://www.postman.com/,\"Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create ...\",https://symbols.getvecta.com/stencil_92/21_postman-icon.c79f00c910.svg,brew install --cask postman,true,linux testing,false,windows testing,false"
+        "id": "cardAppPostman",
+        "title": "Postman",
+        "titleLink": "https://www.postman.com/",
+        "description": "\"Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create ...\"",
+        "icon": "https://symbols.getvecta.com/stencil_92/21_postman-icon.c79f00c910.svg",
+        "macScript": "brew install --cask postman",
+        "macEnabled": true,
+        "linuxScript": "linux testing",
+        "linuxEnabled": false,
+        "windowsScript": "windows testing",
+        "windowsEnabled": false
     },
     {
-        "id,title,titleLink,description,icon,macScript,macEnabled,linuxScript,linuxEnabled,windowsScript,windowsEnabled": "cardAppDocker,Docker,https://docs.docker.com/get-docker/,\"Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers...\",https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png,brew install docker docker-compose docker-machine,true,linux testing,false,windows testing,false"
+        "id": "cardAppDocker",
+        "title": "Docker",
+        "titleLink": "https://docs.docker.com/get-docker/",
+        "description": "\"Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers...\"",
+        "icon": "https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png",
+        "macScript": "brew install docker docker-compose docker-machine",
+        "macEnabled": true,
+        "linuxScript": "linux testing",
+        "linuxEnabled": false,
+        "windowsScript": "windows testing",
+        "windowsEnabled": false
     },
     {
-        "id,title,titleLink,description,icon,macScript,macEnabled,linuxScript,linuxEnabled,windowsScript,windowsEnabled": "cardAppRectangle,Rectangle,https://rectangleapp.com/,\"Rectangle. Move and resize windows in macOS using keyboard shortcuts or snap areas...\",https://repository-images.githubusercontent.com/193162629/0227dd00-2825-11eb-9ef2-6d36f9636d4e,brew install --cask rectangle,true,,false,,false"
+        "id": "cardAppRectangle",
+        "title": "Rectangle",
+        "titleLink": "https://rectangleapp.com/",
+        "description": "\"Rectangle. Move and resize windows in macOS using keyboard shortcuts or snap areas...\"",
+        "icon": "https://repository-images.githubusercontent.com/193162629/0227dd00-2825-11eb-9ef2-6d36f9636d4e",
+        "macScript": "brew install --cask rectangle",
+        "macEnabled": true,
+        "linuxScript": "",
+        "linuxEnabled": false,
+        "windowsScript": "",
+        "windowsEnabled": false
     }
 ]
