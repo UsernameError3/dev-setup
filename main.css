@@ -54,7 +54,7 @@ a:active {
 /* Navbar */
 .grid-navbar {
     grid-area: navbar;
-    background-color: #131313;
+    background-color: #101010;
 }
 
 .flex-navbar {
@@ -73,13 +73,12 @@ a:active {
     grid-template-areas:
         "checklist script";
     grid-area: content;
-    background-color: #252525;
+    background-color: #181818;
     overflow-y: auto;
 }
 
 /* Checklist */
 .grid-checklist {
-    border-right: solid 2px #000000;
     grid-area: checklist;
     overflow-y: scroll;
 }
@@ -106,7 +105,7 @@ a:active {
     margin-top: 10px;
     margin-bottom: 10px;
     border: 1px solid #000000;
-    background-color: #181818;
+    background-color: #101010;
 }
 
 .grid-checklist-card-checkbox {
@@ -145,6 +144,7 @@ a:active {
 
 .flex-checklist-card-icon {
     display: flex;
+    background-color: #131313;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -163,6 +163,7 @@ a:active {
 
 .flex-checklist-card-description {
     display: flex;
+    background-color: #131313;
     height: 100%;
     padding-left: 15px;
     padding-top: 12px;
@@ -175,6 +176,7 @@ a:active {
 
 .flex-script {
     display: flex;
+    background-color: #181818;
     height: 100%;
     align-items: center;
     justify-content: center;
@@ -182,8 +184,9 @@ a:active {
 
 .script-text-area {
     display: flex;
-    border: 1px solid #000000;
-    background-color: #131313;
+    border: 1px solid #101010;
+    padding: 15px;
+    background-color: #141414;
     color: #FFFFFF;
     resize: none;
     width: 95%;
@@ -199,7 +202,7 @@ a:active {
     grid-template-areas:
         "checkButton codeButton";
     grid-area: buttons;
-    background-color: #131313;
+    background-color: #101010;
 }
 
 /* Config Buttons */
