@@ -54,7 +54,7 @@ a:active {
 /* Navbar */
 .grid-navbar {
     grid-area: navbar;
-    background-color: #101010;
+    background-color: #090909;
 }
 
 .flex-navbar {
@@ -73,7 +73,7 @@ a:active {
     grid-template-areas:
         "checklist script";
     grid-area: content;
-    background-color: #181818;
+    background-color: #202020;
     overflow-y: auto;
 }
 
@@ -94,7 +94,7 @@ a:active {
 
 .grid-checklist-card {
     display: grid;
-    width: 95%;
+    width: 70%;
     grid-template-columns: 0.3fr 1.7fr;
     grid-template-rows: 0.2fr 1.8fr;
     gap: 0px 0px;
@@ -104,14 +104,13 @@ a:active {
         "icon description";
     margin-top: 10px;
     margin-bottom: 10px;
-    border: 1px solid #000000;
-    background-color: #101010;
+    border: 1px solid #090909;
+    background-color: #090909;
 }
 
 .grid-checklist-card-checkbox {
     grid-area: checkbox;
     width: 100%;
-    border-bottom: 1px solid #000000;
 }
 
 .flex-checklist-card-checkbox {
@@ -124,7 +123,6 @@ a:active {
 .grid-checklist-card-title {
     grid-area: title;
     width: 100%;
-    border-bottom: 1px solid #000000;
 }
 
 .flex-checklist-card-title {
@@ -167,6 +165,7 @@ a:active {
     height: 100%;
     padding-left: 15px;
     padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 /* Script */
@@ -176,7 +175,7 @@ a:active {
 
 .flex-script {
     display: flex;
-    background-color: #181818;
+    background-color: #202020;
     height: 100%;
     align-items: center;
     justify-content: center;
@@ -184,9 +183,9 @@ a:active {
 
 .script-text-area {
     display: flex;
-    border: 1px solid #101010;
+    border: 1px solid #090909;
     padding: 15px;
-    background-color: #141414;
+    background-color: #090909;
     color: #FFFFFF;
     resize: none;
     width: 95%;
@@ -202,7 +201,7 @@ a:active {
     grid-template-areas:
         "checkButton codeButton";
     grid-area: buttons;
-    background-color: #101010;
+    background-color: #090909;
 }
 
 /* Config Buttons */
@@ -249,7 +248,6 @@ a:active {
 
 .button:hover {
     background-color: #0c87ec;
-    color: #000000;
 }
 
 .help-button {
