@@ -20,7 +20,7 @@
   "scripts": {
     "build": "gulp build",
     "build-message": "echo \"Linting & Building Files...\" && exit 0",
-    "commit-check": "git update-index --refresh && git diff-index --quiet HEAD --",
+    "commit-check": "gulp commit-status",
     "format": "npx eslint --fix \"./**/index.js\"",
     "test": "",
     "start": "",
@@ -29,7 +29,8 @@
   },
   "pre-commit": [
     "build-message",
-    "build"
+    "build",
+    "commit-check"
   ],
   "nyc": {
     "check-coverage": true,

@@ -35,4 +35,4 @@ const buildCardJSON = () => {
     }
 }
 
-exports.buildCardJSON = buildCardJSON;
+module.exports.buildCardJSON = buildCardJSON;

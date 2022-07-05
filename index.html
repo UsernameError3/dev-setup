@@ -24,14 +24,26 @@
             </div>
         </div>
         <div class="grid-buttons">
-            <div class="grid-config-buttons">
-                <div id="appControls" class="flex-config-buttons">
+            <div class="grid-config-search">
+                <div class="flex-config-search">
+                    <!-- Search Bar -->
+                </div>
+            </div>
+            <div class="grid-script-buttons">
+                <div id="appControls" class="flex-script-buttons">
+                    <!-- Buttons -->
+                    <label>
+                        <input type="button" id="selectChecklistButton" class="button" value="Deselect All">
+                    </label>
+                    <label>
+                        <input type="button" id="generateScriptButton" class="button pad-right" value="Generate">
+                    </label>
                     <!-- Radio Button 1 -->
                     <label class="custom-radial">
                         <input type="radio" id="radioMac" name="radioSelectOS" checked="checked">
                         <span class="custom-radial-checkmark"></span>
                     </label>
-                    <p class="custom-checkbox-text">Mac OS</p>
+                    <p class="custom-checkbox-text">Mac</p>
                     <!-- Radio Button 2 -->
                     <label class="custom-radial">
                         <input type="radio" id="radioLinux" name="radioSelectOS">
@@ -44,24 +56,10 @@
                         <span class="custom-radial-checkmark"></span>
                     </label>
                     <p class="custom-checkbox-text">Windows</p>
-                    
-                    <!-- Buttons -->
-                    <label>
-                        <input type="button" id="selectChecklistButton" class="button" value="Deselect All">
-                    </label>
-                    <label>
-                        <input type="button" id="generateScriptButton" class="button" value="Generate">
-                    </label>
-
                     <!-- Help Popup -->
                     <label>
                         <p class="help-button">?</p>
                     </label>
-                </div>
-            </div>
-            <div class="grid-script-buttons">
-                <div class="flex-script-buttons">
-                    <!-- move controls here -->
                 </div>
             </div>
           </div>

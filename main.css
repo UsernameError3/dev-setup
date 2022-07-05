@@ -33,6 +33,9 @@ a:active {
     text-decoration: none; 
 }
 
+.pad-right {
+    margin-right: 40px !important;
+}
 
 /* CSS Grid / Flex */
 
@@ -199,18 +202,18 @@ a:active {
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-template-areas:
-        "checkButton codeButton";
+        "search codeButtons";
     grid-area: buttons;
     background-color: #090909;
 }
 
 /* Config Buttons */
-.grid-config-buttons {
-    grid-area: checkButton;
+.grid-config-search {
+    grid-area: search;
     text-align: center;
 }
 
-.flex-config-buttons {
+.flex-config-search {
     display: flex;
     height: 100%;
     align-items: center;
@@ -219,7 +222,7 @@ a:active {
 
 /* Script Buttons */
 .grid-script-buttons {
-    grid-area: codeButton;
+    grid-area: codeButtons;
     text-align: center;
 }
 
@@ -251,8 +254,8 @@ a:active {
 }
 
 .help-button {
-    padding-left: 25px;
-    padding-right: 5px;
+    padding-left: 5px;
+    padding-right: 25px;
     font-weight: bold;
 }
 
