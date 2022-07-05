@@ -8,7 +8,7 @@
         "icon": "https://code.visualstudio.com/assets/images/code-stable.png",
         "macScript": "brew install --cask visual-studio-code",
         "macEnabled": true,
-        "linuxScript": "test",
+        "linuxScript": "",
         "linuxEnabled": false,
         "windowsScript": "",
         "windowsEnabled": false
