@@ -29,7 +29,7 @@ const buildCardJSON = () => {
     if (errors.length) {
         throw new Error(errors.join('\n'));
     } else {
-        fs.writeFileSync(fileOutputName, JSON.stringify(data, null, 4));
+        fs.writeFileSync(fileOutputName, `${JSON.stringify(data, null, 4)}\n`);
         console.log('Finished Card JSON Export...');
         return;
     }
