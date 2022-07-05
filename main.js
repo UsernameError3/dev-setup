@@ -1,16 +1,15 @@
-// Specify Card Data URL
-const url = 'https://usernameerror3.github.io/dev-setup/data.json';
+// Store Current OS Selection
 let currentOS = 'mac';
 
 // Fetch Card Data
-async function getData(url) {
+async function getData() {
     try {
+        const url = 'https://usernameerror3.github.io/dev-setup/data/data.json';
         const response = await fetch(url);
         const data = await response.json();
         return data;
     } catch (error) {
-        // Error handling here
-        console.log(error);
+        console.log('Fetching Data Failed: ', error);
         return;
     }
 }
@@ -23,7 +22,6 @@ function generateCard(data, script) {
         const checklistCardIconSrc = data.icon;
         const checklistCardDescription = data.description;
         const checklistCardHiddenScriptValue = script;
-
         const checklistCardTemplate = `
             <div class="grid-checklist-card">
                 <div class="grid-checklist-card-checkbox">
@@ -54,23 +52,18 @@ function generateCard(data, script) {
                 </div>
             </div>
         `;
-
         return checklistCardTemplate;
-
     } catch (error) {
         console.log(error);
         return;
     }
 }
 
-
-// Generate Cards
 function assembleCards(data) {
     const checklistCardId = document.getElementById('checklistCards');
     const checklistCards = [];
 
     for (let i = 0; i < data.length; i++) {
-
         if (currentOS == 'mac') {
             if (data[i].macEnabled == false) {
                 continue;
@@ -164,7 +157,7 @@ async function assembleScript (cardData) {
 // Generate Elements on Page Load
 window.onload = async () => {
     // Get Card Data
-    let cardData = await getData(url);
+    let cardData = await getData();
 
     // Define App Control Buttons
     const selectMacOS = document.getElementById('radioMac');
@@ -187,7 +180,6 @@ window.onload = async () => {
                 console.log('OS Selection Failed')
             }
         } catch (error) {
-            // Error handling here
             console.log(error);
         }
     });
@@ -202,7 +194,6 @@ window.onload = async () => {
                 console.log('OS Selection Failed')
             }
         } catch (error) {
-            // Error handling here
             console.log(error);
         }
     });
@@ -217,12 +208,11 @@ window.onload = async () => {
                 console.log('OS Selection Failed')
             }
         } catch (error) {
-            // Error handling here
             console.log(error);
         }
     });
 
-    // Enable Mass Selection / Deselection
+    // Enable Mass Selection or Deselection
     selectChecklistButton.addEventListener('click', (event) => {
         try {
             const checklist = document.getElementsByName('checklistCheckbox');
@@ -244,7 +234,6 @@ window.onload = async () => {
                 }
             }
         } catch (error) {
-            // Error handling here
             console.log(error);
         }
     });
@@ -265,7 +254,6 @@ window.onload = async () => {
             }
 
         } catch (error) {
-            // Error handling here
             console.log(error);
         }
     });

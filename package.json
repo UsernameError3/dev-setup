@@ -20,15 +20,17 @@
   "scripts": {
     "build": "gulp build",
     "build-message": "echo \"Linting & Building Files...\" && exit 0",
+    "commit-check": "gulp commit-status",
     "format": "npx eslint --fix \"./**/index.js\"",
-    "test": "node index.js",
-    "start": "node index.js",
-    "stop": "node index.js",
+    "test": "",
+    "start": "",
+    "stop": "",
     "coverage": "nyc npm run test"
   },
   "pre-commit": [
     "build-message",
-    "build"
+    "build",
+    "commit-check"
   ],
   "nyc": {
     "check-coverage": true,
