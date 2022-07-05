@@ -141,6 +141,18 @@ async function assembleScript (cardData) {
     const checklist = document.getElementsByName('checklistCheckbox');
     const checkboxes = [];
 
+    // Add OS Specific Configuration
+    if (currentOS == 'mac') {
+        checkboxes.push(`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`);
+    } else if (currentOS == 'linux') {
+        // checkboxes.push();
+    } else if (currentOS == 'windows') {
+        // checkboxes.push();
+    } else {
+        console.log('OS Specific Configuration Failed')
+    }
+
+    // Aggregate Card Configs
     for (const checkboxId of checklist) {
         if (checkboxId.type == 'checkbox' && checkboxId.checked == true) {
             checkboxes.push(await matchCheckboxes(cardData, checkboxId.id));
