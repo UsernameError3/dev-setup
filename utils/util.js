@@ -8,7 +8,7 @@ const buildCardJSON = () => {
 
     console.log('Importing: ', fileInputName);
     console.log('Exporting: ', fileOutputName);
-    const data = csvToJson.fieldDelimiter(';').formatValueByType().getJsonFromCsv(fileInputName);
+    const data = csvToJson.fieldDelimiter(',').formatValueByType().getJsonFromCsv(fileInputName);
     fs.writeFileSync(fileOutputName, JSON.stringify(data, null, 4));
     console.log('Finished Card JSON Export...');
     return;
