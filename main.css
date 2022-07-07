@@ -217,7 +217,7 @@ a:active {
     display: flex;
     height: 100%;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center */
 }
 
 /* Script Buttons */
@@ -239,7 +239,7 @@ a:active {
     display: inline-block;
     padding: 10px 20px;
     margin: 4px 10px;
-    border: 1px solid #000000;
+    border: 1px solid #090909;
     background-color: #404040;
     color: #FFFFFF;
     text-align: center;
@@ -295,7 +295,7 @@ a:active {
     height: 25px;
     width: 25px;
     background-color: #404040;
-    border: 1px solid #000000;
+    border: 1px solid #090909;
 }
 
 /* On mouse-over, add a grey background color */
@@ -360,7 +360,7 @@ a:active {
     height: 25px;
     width: 25px;
     background-color: #404040;
-    border: 1px solid #000000;
+    border: 1px solid #090909;
     border-radius: 50%;
 }
 
@@ -394,4 +394,15 @@ a:active {
     height: 8px;
     border-radius: 50%;
     background: #FFFFFF;
+}
+
+/* Custom Search Bar */
+.search-bar {
+    width: 100%;
+    border: 1px solid #050505;
+    background-color: #181818;
+    color: #FFFFFF;
+    padding: 11px;
+    margin-right: 20px;
+    font-size: 16px;
 }
