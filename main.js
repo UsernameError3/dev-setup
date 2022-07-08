@@ -345,5 +345,6 @@ window.onload = async () => {
     });
 
     checklistSearchBar.addEventListener('keyup', searchQuery);
+    
 
 };
