@@ -13,24 +13,30 @@ body {
     width: 100%;
 }
 
-a:link { 
+a:link {
     color: #0c87ec;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
-a:visited { 
+a:visited {
     color: #0c87ec;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
-a:hover { 
+a:hover {
     color: #0c87ec;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
-a:active { 
+a:active {
     color: #0c87ec;
-    text-decoration: none; 
+    text-decoration: none;
+}
+
+.text-warning {
+    color: #FF0000;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .pad-right {
@@ -189,6 +195,7 @@ a:active {
     border: 1px solid #090909;
     padding: 15px;
     background-color: #090909;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     color: #FFFFFF;
     resize: none;
     width: 95%;
@@ -253,11 +260,175 @@ a:active {
     background-color: #0c87ec;
 }
 
+/* Help Menu */
 .help-button {
-    padding-left: 5px;
-    padding-right: 25px;
-    font-weight: bold;
+    color: #FFFFFF;
 }
+
+.help-button-icon {
+    z-index: 5;
+    position: relative;
+    padding: 5px 8px;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.help-content {
+    display: none;
+    position: fixed;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 65%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+    background-color: #131313;
+}
+
+@keyframes pageOverlayFade {
+    from {background: rgba(0, 0, 0, 0.0);}
+    to {background: rgba(0, 0, 0, 0.8);}
+}
+
+.page-overlay {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    animation-name: pageOverlayFade;
+    animation-duration: 1s;
+    /* transition: 1s; */
+}
+
+.help-content a:hover {
+    background-color: #ddd;
+}
+
+.help-button-icon:hover {
+    color: #0c87ec;
+}
+
+.help-button-icon:hover + .help-content, .help-button-icon:hover ~ .page-overlay{
+    display: block;
+}
+
+.grid-help-menu {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 3fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "helpTitle"
+        "helpContent"
+        "helpFooter";
+}
+
+.grid-help-menu-title {
+    grid-area: helpTitle;
+}
+
+.flex-help-menu-title {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #0c87ec;
+    background-color: #000000;
+}
+
+.grid-help-menu-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "helpContentTl helpContentTr"
+        "helpContentBl helpContentBr";
+    grid-area: helpContent;
+}
+
+.grid-help-menu-content-tl {
+    grid-area: helpContentTl;
+}
+
+.flex-help-menu-content-tl {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 25px 35px 0px 35px;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.grid-help-menu-content-tr {
+    grid-area: helpContentTr;
+}
+
+.flex-help-menu-content-tr {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 25px 35px 0px 35px;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.grid-help-menu-content-br {
+    grid-area: helpContentBr;
+}
+
+.flex-help-menu-content-br {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 25px 35px 0px 35px;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.grid-help-menu-content-bl {
+    grid-area: helpContentBl;
+}
+
+.flex-help-menu-content-bl {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 25px 35px 0px 35px;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.grid-help-menu-footer {
+    grid-area: helpFooter;
+}
+
+.flex-help-menu-footer {
+    display: flex;
+    height: 100%;
+    padding: 25px 50px 30px 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* GitHub Icon */
+.github-icon {
+    width: 60%;
+    height: auto;
+}
+
 
 /* Custom Checkboxes: */
 
@@ -398,11 +569,12 @@ a:active {
 
 /* Custom Search Bar */
 .search-bar {
-    width: 100%;
+    width: 60%;
     border: 1px solid #050505;
     background-color: #181818;
     color: #FFFFFF;
     padding: 11px;
-    margin-right: 20px;
+    margin-right: 30px;
+    margin-left: 20px;
     font-size: 16px;
 }

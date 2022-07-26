@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="./main.css">
-    <script src="main.js"></script> 
+    <script src="main.js"></script>
 </head>
+
 <body>
     <div class="grid-container">
         <div class="grid-navbar">
@@ -19,7 +21,7 @@
             </div>
             <div class="grid-script">
                 <div class="flex-script">
-                    <textarea class="script-text-area" id="scriptBox" name="script-box" wrap = "off"></textarea>
+                    <textarea class="script-text-area" id="scriptBox" name="script-box" wrap="off"></textarea>
                 </div>
             </div>
         </div>
@@ -29,7 +31,7 @@
                     <label>
                         <input type="button" id="selectChecklistButton" class="button" value="Deselect All">
                     </label>
-                    <input type="text" id="checklistSearchBar" class="search-bar" placeholder="search..." >
+                    <input type="text" id="checklistSearchBar" class="search-bar" placeholder="search...">
                 </div>
             </div>
             <div class="grid-script-buttons">
@@ -58,11 +60,58 @@
                     <p class="custom-checkbox-text">Windows</p>
                     <!-- Help Popup -->
                     <label>
-                        <p class="help-button">?</p>
+                        <div class="help-button">
+                            <div class="help-button-icon">?</div>
+                            <div class="help-content">
+                                <div class="grid-help-menu">
+                                    <div class="grid-help-menu-title">
+                                        <div class="flex-help-menu-title">
+                                            <H4>Help Menu</H4>
+                                        </div>
+                                    </div>
+                                    <div class="grid-help-menu-content">
+                                        <div class="grid-help-menu-content-tl">
+                                            <div class="flex-help-menu-content-tl">
+                                                <p>This site is meant for rapidly setting up a new development environment, or augmenting an existing one. All the applications and custom configuration are things that I personally use. This applications usage is divided into 3 sections.</p>
+                                            </div>
+                                        </div>
+                                        <div class="grid-help-menu-content-tr">
+                                            <div class="flex-help-menu-content-tr">
+                                                <H3>The Controls</H3>
+                                                <p>This is the bottom toolbar. You can control mass selection of the checkboxes, search the checkboxes, and control what operating system you wish to work with.</p>
+                                            </div>
+                                        </div>
+                                        <div class="grid-help-menu-content-br">
+                                            <div class="flex-help-menu-content-br">
+                                                <H3>The Script</H3>
+                                                <p>This is the right column. The install script gets generated based off what is checked in the checklist. When you click the text area, the script should be automatically copied to your clipboard.</p>
+                                            </div>
+                                        </div>
+                                        <div class="grid-help-menu-content-bl">
+                                            <div class="flex-help-menu-content-bl">
+                                                <H3>The Checklist</H3>
+                                                <p>This is the left column of available applications and configurations. When you click the checkbox, you are indicating you want the configured script value for that card.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-help-menu-footer">
+                                        <div class="flex-help-menu-footer">
+                                            <p class="text-warning">This tool was built for personal use.<br>3rd Party Applications and their respective icons are not endorsements.<br>Be careful when using copied install scripts from the internet.<br>Use at your own risk.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-overlay"></div>
+                        </div>
+                    </label>
+                    <!-- Link to GitHub -->
+                    <label>
+                        <a href="https://github.com/UsernameError3/dev-setup"><img class="github-icon" src="./img/github-mark-light-32px.png" alt="GitHub Link" ></a>
                     </label>
                 </div>
             </div>
-          </div>
+        </div>
     </div>
 </body>
-</html> 
+
+</html>
