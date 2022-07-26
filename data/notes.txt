@@ -33,3 +33,6 @@ https://www.digitalocean.com/community/tutorials/html-preload-prefetch
 
 Grid Layout:
 https://grid.layoutit.com/
+
+Example Mac Setup:
+https://medium.com/@borekb/setting-up-mac-for-development-notes-from-a-windows-user-d4028535dc49

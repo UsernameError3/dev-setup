@@ -35,6 +35,8 @@ a:active {
 
 .text-warning {
     color: #FF0000;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .pad-right {
@@ -267,7 +269,9 @@ a:active {
     z-index: 5;
     position: relative;
     padding: 5px 8px;
+    margin-right: 20px;
     font-weight: bold;
+    font-size: 20px;
 }
 
 .help-content {
@@ -276,8 +280,8 @@ a:active {
     z-index: 4;
     top: 50%;
     left: 50%;
-    width: 60%;
-    height: 60%;
+    width: 70%;
+    height: 65%;
     transform: translate(-50%, -50%);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
     background-color: #131313;
@@ -361,8 +365,9 @@ a:active {
 
 .flex-help-menu-content-tl {
     display: flex;
+    flex-direction: column;
     height: 100%;
-    padding: 5px;
+    padding: 25px 35px 0px 35px;
     /* align-items: center; */
     /* justify-content: center; */
 }
@@ -373,8 +378,9 @@ a:active {
 
 .flex-help-menu-content-tr {
     display: flex;
+    flex-direction: column;
     height: 100%;
-    padding: 5px;
+    padding: 25px 35px 0px 35px;
     /* align-items: center; */
     /* justify-content: center; */
 }
@@ -385,8 +391,9 @@ a:active {
 
 .flex-help-menu-content-br {
     display: flex;
+    flex-direction: column;
     height: 100%;
-    padding: 5px;
+    padding: 25px 35px 0px 35px;
     /* align-items: center; */
     /* justify-content: center; */
 }
@@ -397,8 +404,9 @@ a:active {
 
 .flex-help-menu-content-bl {
     display: flex;
+    flex-direction: column;
     height: 100%;
-    padding: 5px;
+    padding: 25px 35px 0px 35px;
     /* align-items: center; */
     /* justify-content: center; */
 }
@@ -410,9 +418,17 @@ a:active {
 .flex-help-menu-footer {
     display: flex;
     height: 100%;
+    padding: 25px 50px 30px 50px;
     align-items: center;
     justify-content: center;
 }
+
+/* GitHub Icon */
+.github-icon {
+    width: 60%;
+    height: auto;
+}
+
 
 /* Custom Checkboxes: */
 
