@@ -146,6 +146,7 @@ async function assembleScript (cardData) {
     // Add OS Specific Configuration
     if (currentOS == 'mac') {
         checkboxes.push(`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`);
+        checkboxes.push(`brew tap homebrew/cask-versions`);
     } else if (currentOS == 'linux') {
         // checkboxes.push();
     } else if (currentOS == 'windows') {
